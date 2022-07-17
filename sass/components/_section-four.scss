@@ -5,25 +5,52 @@
 
 .section-four__header {
   @extend %section-header;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 28px;
+  }
 }
 
 .section-four__clients {
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .section-four__item {
-  padding: 15px 31px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
   border: 1px solid getColor("icon-1");
   border-radius: 4px;
   fill: getColor("icon-1");
-
-  &:not(:last-child) {
-    margin-right: $section-padding-2;
-  }
 
   &:hover {
     border: 1px solid getColor("primary");
     fill: getColor("primary");
   }
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    min-width: calc((100% - 60px) / 2);
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 31px;
+    padding-right: 31px;
+    &:not(:last-child) {
+      margin-right: $section-padding-2;
+    }
+  }
+}
+
+.section-four__icon {
+  margin: 0 auto;
 }

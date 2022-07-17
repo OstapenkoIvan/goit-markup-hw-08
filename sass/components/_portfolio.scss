@@ -1,12 +1,21 @@
 .portfolio {
-  padding-bottom: $section-padding;
-  padding-top: $section-padding;
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: $section-padding;
+    padding-top: $section-padding;
+  }
 }
 
 .portfolio__filter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 50px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .portfolio__button {
@@ -28,33 +37,45 @@
   }
 }
 
-.portfolio__list:not(:last-child) {
-  margin-right: 8px;
+.portfolio__list {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  &:nth-child(-n + 3) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .portfolio__container {
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .item {
-  width: calc((100% - 60px) / 3);
   background-color: getColor("font-3");
   border: 1px solid #eeeeee;
   margin-bottom: $section-padding-2;
-
-  &:not(:nth-child(3n)) {
-    margin-right: $section-padding-2;
-  }
-
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-  }
 
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+
+    &:not(:nth-child(3n)) {
+      margin-right: $section-padding-2;
+    }
+
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -62,6 +83,16 @@
   position: relative;
   background-color: var(--clr-background-5);
   overflow: hidden;
+
+  @media screen and (min-width: 480px) {
+    height: 294px;
+  }
+}
+
+.item__text {
+  color: getColor("font-3");
+  font-size: 18px;
+  line-height: 1.56;
 }
 
 .item__container {
@@ -89,23 +120,16 @@
   padding: 20px 24px;
 }
 
-.item__name {
-  color: getColor("font-2");
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.88;
-}
-
-.item__text {
-  color: getColor("font-3");
-  font-size: 18px;
-  line-height: 1.56;
-}
-
 .item__header {
   font-size: 18px;
   line-height: 2;
   font-weight: 700;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
+}
+
+.item__name {
+  color: getColor("font-2");
+  font-size: 16px;
+  line-height: 1.88;
 }
