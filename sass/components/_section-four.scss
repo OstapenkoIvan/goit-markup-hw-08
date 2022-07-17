@@ -1,0 +1,29 @@
+.section-four {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+}
+
+.section-four__header {
+  @extend %section-header;
+}
+
+.section-four__clients {
+  display: flex;
+  justify-content: center;
+}
+
+.section-four__item {
+  padding: 15px 31px;
+  border: 1px solid getColor("icon-1");
+  border-radius: 4px;
+  fill: getColor("icon-1");
+
+  &:not(:last-child) {
+    margin-right: $section-padding-2;
+  }
+
+  &:hover {
+    border: 1px solid getColor("primary");
+    fill: getColor("primary");
+  }
+}

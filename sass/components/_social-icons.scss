@@ -1,0 +1,33 @@
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons__thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: getColor("primary");
+    border-radius: 50%;
+  }
+}
+
+.social-icons__img {
+  fill: getColor("icon-1");
+
+  .social-icons__thumb:hover & {
+    fill: getColor("font-3");
+  }
+}

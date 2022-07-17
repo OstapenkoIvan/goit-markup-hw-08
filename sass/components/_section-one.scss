@@ -1,0 +1,39 @@
+.section-one {
+  background-color: getColor("bcknd-1");
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url("../images/hero.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.section-one__container {
+  color: getColor("font-3");
+  text-align: center;
+}
+
+.sectoin-one__header {
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.button-hero {
+  @extend %button-main;
+
+  margin-top: $section-padding-2;
+  background-color: getColor("primary");
+
+  &:hover {
+    background-color: getColor("secondary");
+  }
+}

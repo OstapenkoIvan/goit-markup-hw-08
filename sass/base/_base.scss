@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-2;
+  color: getColor("font-1");
+  font-size: 14px;
+  position: relative;
+}
+
+a {
+  font-family: $font-2;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  line-height: 1.143;
+}
+
+img,
+svg {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+}
+
+h2,
+h3,
+h4,
+h5,
+p,
+li {
+  letter-spacing: 0.03em;
+}

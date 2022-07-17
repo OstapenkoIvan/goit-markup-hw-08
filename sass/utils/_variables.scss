@@ -1,0 +1,28 @@
+$colors: (
+  "primary": #2196f3,
+  "secondary": #188ce8,
+  "bcknd-1": #2f303a,
+  "bcknd-2": #f5f4fa,
+  "bcknd-3": #e5e5e5,
+  "bcknd-4": rgba(47, 48, 58, 0.8),
+  "bcknd-5": rgba(33, 150, 243, 0.9),
+  "font-1": #212121,
+  "font-2": #757575,
+  "font-3": #ffffff,
+  "font-4": rgba(255, 255, 255, 0.6),
+  "icon-1": #afb1b8,
+  "border-1": #eeeeee,
+  "border-2": #ececec,
+);
+
+@function getColor($color) {
+  @return map-get($colors, $color);
+}
+
+$font-1: "Raleway", sans-serif;
+$font-2: "Roboto", sans-serif;
+
+$section-padding: 94px;
+$section-padding-2: 30px;
+
+$cubic-1: cubic-bezier(0.4, 0, 0.2, 1);

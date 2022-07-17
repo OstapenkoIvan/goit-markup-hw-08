@@ -1,0 +1,102 @@
+.footer {
+  height: 252px;
+  background-color: getColor("bcknd-1");
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__sections {
+  display: flex;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+  color: getColor("font-3");
+}
+
+.footer__contact {
+  color: getColor("font-4");
+
+  &:hover,
+  &:focus {
+    color: getColor("primary");
+    fill: getColor("primary");
+  }
+}
+
+.footer__street {
+  color: getColor("font-3");
+}
+
+.footer__contact,
+.footer__street {
+  line-height: 1.71;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer__li:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__social {
+  margin-left: 70px;
+  margin-top: 12px;
+}
+
+.footer__title {
+  color: getColor("font-3");
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  text-transform: uppercase;
+}
+
+.footer__icon {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-subscribe {
+  margin-left: $section-padding;
+  margin-top: 12px;
+}
+
+.footer-subscribe__thumb {
+  display: flex;
+  margin-top: 20px;
+}
+
+.footer-subscribe__input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: getColor("bcknd-1");
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  width: 358px;
+  font-size: 16px;
+  line-height: 1.25;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.footer-subscribe__submit {
+  @extend %button-main;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 29px;
+  margin-left: 12px;
+  fill: getColor("font-3");
+  background-color: getColor("primary");
+
+  &:hover {
+    background-color: getColor("secondary");
+  }
+}

@@ -1,0 +1,86 @@
+header {
+  border-bottom: 1px solid getColor("border-2");
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: getColor("font-3");
+
+  &__logo {
+    margin-right: 93px;
+  }
+}
+
+.nav {
+  display: flex;
+  font-weight: 500;
+}
+
+.nav__btn {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    height: 4px;
+    width: 0;
+    background-color: getColor("secondary");
+    border-radius: 4px;
+  }
+  &--active {
+    color: getColor("primary");
+    &::after {
+      width: 100%;
+    }
+  }
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  letter-spacing: 0.02em;
+  &:hover,
+  &:focus {
+    color: getColor("primary");
+  }
+}
+
+.contact {
+  display: flex;
+  margin-left: auto;
+}
+
+.contact__link {
+  color: getColor("font-2");
+  letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &:hover,
+  &:focus {
+    color: getColor("primary");
+  }
+}
+
+.contact__icon {
+  vertical-align: middle;
+  fill: currentColor;
+  display: inline;
+  margin-right: 10px;
+  .contact__link:focus &,
+  .contact__link:hover & {
+    fill: getColor("primary");
+  }
+}
+
+.contact__item:not(:last-child) {
+  margin-right: 50px;
+}
