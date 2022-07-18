@@ -85,15 +85,14 @@
   line-height: 1.142;
   text-transform: uppercase;
   margin-bottom: 20px;
-
-  //   @media screen and (max-width: 1199px) {
-  //     margin-bottom: 20px;
-  //   }
 }
 
 .footer__icon {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+}
+
+.social-i cons__thumb.footer__icon .social-icons__img {
   fill: getColor("font-3");
 }
 

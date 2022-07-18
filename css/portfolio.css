@@ -555,7 +555,7 @@ header {
 .social-icons__thumb:not(:last-child) {
   margin-right: 10px;
 }
-.social-icons__thumb:hover {
+.social-icons__thumb:hover, .social-icons__thumb:focus {
   background-color: #2196f3;
 }
 
@@ -563,7 +563,7 @@ header {
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-icons__thumb:hover .social-icons__img {
+.social-icons__thumb:hover .social-icons__img, .social-icons__thumb:focus .social-icons__img {
   fill: #ffffff;
 }
 
@@ -661,6 +661,9 @@ header {
 .footer__icon {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+}
+
+.social-i cons__thumb.footer__icon .social-icons__img {
   fill: #ffffff;
 }
 

@@ -204,60 +204,65 @@
   <!-- This is FOOTER part -->
   <footer class="footer">
     <div class="container footer__sections">
-      <section>
-        <a href="index.html" class="logo footer__logo"><span class="logo__web">Web</span>Studio</a>
+      <section class="footer-address">
+        <a href="index.html" class="logo address__logo"><span class="logo__web">Web</span>Studio</a>
         <address>
-          <ul>
-            <li class="footer__li">
-              <a class="footer__street" href="http://maps.google.com" target="_blank" rel="noopener noreferrer">г. Киев,
+          <ul class="address">
+            <li class="address__li">
+              <a class="footer__street" href="https://goo.gl/maps/dMaArt2xvUtYKD9Z6" target="_blank"
+                rel="noopener noreferrer nofollow">г. Киев,
                 пр-т Леси Украинки, 26</a>
             </li>
-            <li class="footer__li">
-              <a class="footer__contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <li class="address__li">
+              <a class="address__contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
-            <li class="footer__li">
-              <a class="footer__contact" href="tel:+380961111111">+380961111111</a>
+            <li class="address__li">
+              <a class="address__contact" href="tel:+380961111111">+380961111111</a>
             </li>
           </ul>
         </address>
       </section>
       <section class="footer__social">
         <h2 class="footer__title">присоединяйтесь</h2>
-        <div class="social-icons">
-          <div class="social-icons__thumb footer__icon">
-            <svg class="social-icons__img" width="20px" height="20px">
-              <use href="images/icons.svg#icon-instagram-1"></use>
-            </svg>
-          </div>
-          <div class="social-icons__thumb footer__icon">
-            <svg class="social-icons__img" width="20px" height="20px">
-              <use href="images/icons.svg#icon-twitter-1"></use>
-            </svg>
-          </div>
-          <div class="social-icons__thumb footer__icon">
-            <svg class="social-icons__img" width="20px" height="20px">
-              <use href="images/icons.svg#icon-facebook-1"></use>
-            </svg>
-          </div>
-          <div class="social-icons__thumb footer__icon">
-            <svg class="social-icons__img" width="20px" height="20px">
-              <use href="images/icons.svg#icon-linkedin-1"></use>
-            </svg>
-          </div>
-        </div>
+        <ul class="social-icons">
+          <li class="social-icons__thumb footer__icon"><a href="instagram.com">
+              <svg class="social-icons__img" width="20px" height="20px">
+                <use href="images/icons.svg#icon-instagram-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons__thumb footer__icon"><a href="twitter.com">
+              <svg class="social-icons__img" width="20px" height="20px">
+                <use href="images/icons.svg#icon-twitter-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons__thumb footer__icon"><a href="facebook.com">
+              <svg class="social-icons__img" width="20px" height="20px">
+                <use href="images/icons.svg#icon-facebook-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons__thumb footer__icon"><a href="linkedin.com">
+              <svg class="social-icons__img" width="20px" height="20px">
+                <use href="images/icons.svg#icon-linkedin-1"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </section>
       <section class="footer-subscribe">
         <h2 class="footer__title">подпишись на рассылку</h2>
-        <div class="footer-subscribe__thumb">
-          <form>
-            <input type="mail" placeholder="E-mail" class="footer-subscribe__input">
-            <button type="submit" class="footer-subscribe__submit">Подписаться
-              <svg width="24px" height="24px">
-                <use href="images/icons.svg#icon-icon-send"></use>
-              </svg>
-            </button>
-          </form>
-        </div>
+
+        <form class="subscribe-thumb">
+          <input type="mail" placeholder="E-mail" class="subscribe-thumb__input">
+          <button type="submit" class="subscribe-thumb__submit">Подписаться
+            <svg class="subscribe-thumb__icon" width="24px" height="24px">
+              <use href="images/icons.svg#icon-icon-send"></use>
+            </svg>
+          </button>
+        </form>
+
       </section>
     </div>
   </footer>

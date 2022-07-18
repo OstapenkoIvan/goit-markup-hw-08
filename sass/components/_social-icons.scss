@@ -1,7 +1,6 @@
 .social-icons {
   display: flex;
   justify-content: center;
-  // margin-top: 20px;
 }
 
 .social-icons__thumb {
@@ -20,7 +19,8 @@
     margin-right: 10px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: getColor("primary");
   }
 }
@@ -29,7 +29,8 @@
   fill: getColor("icon-1");
   transition: fill 250ms $cubic-1;
 
-  .social-icons__thumb:hover & {
+  .social-icons__thumb:hover &,
+  .social-icons__thumb:focus & {
     fill: getColor("font-3");
   }
 }

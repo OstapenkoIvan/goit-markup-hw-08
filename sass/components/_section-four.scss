@@ -36,7 +36,8 @@
   border-radius: 4px;
   fill: getColor("icon-1");
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 1px solid getColor("primary");
     fill: getColor("primary");
   }
