@@ -27,6 +27,10 @@
     flex-wrap: wrap;
     margin: -15px;
   }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .section-three__item {
@@ -57,10 +61,6 @@
   @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - 90px) / 4);
     padding-bottom: $section-padding-2;
-
-    &:not(:last-child) {
-      margin-right: $section-padding-2;
-    }
   }
 }
 

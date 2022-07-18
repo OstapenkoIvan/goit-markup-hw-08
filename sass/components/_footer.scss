@@ -84,15 +84,17 @@
   font-size: 14px;
   line-height: 1.142;
   text-transform: uppercase;
+  margin-bottom: 20px;
 
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 20px;
-  }
+  //   @media screen and (max-width: 1199px) {
+  //     margin-bottom: 20px;
+  //   }
 }
 
 .footer__icon {
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  fill: getColor("font-3");
 }
 
 .footer-subscribe {
@@ -132,13 +134,20 @@
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
-  max-width: 450px;
-  width: 100%;
   font-size: 16px;
   line-height: 1.25;
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
   }
 }
 
@@ -164,4 +173,8 @@
   @media screen and (min-width: 1200px) {
     margin-left: 12px;
   }
+}
+
+.subscribe-thumb__icon {
+  width: auto;
 }

@@ -14,8 +14,15 @@
   }
 }
 
+.backdrop body {
+  overflow-y: hidden;
+}
+
+.backdrop.is-hidden body {
+  overflow-y: auto;
+}
+
 .modal {
-  position: sticky;
   background-color: getColor("font-3");
   padding: 40px;
 
@@ -30,6 +37,7 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+    position: fixed;
     top: 50vh;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -38,6 +46,7 @@
   }
 
   @media screen and (min-width: 1200px) {
+    position: sticky;
     width: 528px;
     // height: 581px;
 
