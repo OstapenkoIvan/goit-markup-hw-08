@@ -88,7 +88,7 @@ li {
   opacity: 0;
 }
 
-.footer-subscribe__submit {
+.subscribe-thumb__submit {
   display: block;
   width: 200px;
   height: 50px;
@@ -129,6 +129,13 @@ header {
   .header__logo {
     padding-top: 16px;
     padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 }
 
@@ -249,11 +256,9 @@ header {
   }
 }
 
-.contact {
-  display: flex;
-}
 @media screen and (max-width: 767px) {
   .contact {
+    display: flex;
     flex-direction: column-reverse;
     margin-top: auto;
   }
@@ -263,6 +268,11 @@ header {
     margin-left: auto;
   }
 }
+@media screen and (min-width: 1200px) {
+  .contact {
+    display: flex;
+  }
+}
 
 .contact__link {
   letter-spacing: 0.02em;
@@ -270,7 +280,7 @@ header {
 .contact__link:hover, .contact__link:focus {
   color: #2196f3;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .contact__link {
     color: #757575;
   }
@@ -282,27 +292,45 @@ header {
   }
 }
 
-.contact__icon {
-  display: none;
+@media screen and (max-width: 767px) {
+  .contact__icon {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) {
   .contact__icon {
-    margin-right: 50px;
+    width: auto;
     vertical-align: middle;
     fill: currentColor;
     display: inline;
-    margin-right: 10px;
+    margin-right: 8px;
   }
   .contact__link:focus .contact__icon, .contact__link:hover .contact__icon {
     fill: #2196f3;
   }
-}
-
-@media screen and (min-width: 1200px) {
-  .contact__item:not(:last-child) {
-    margin-right: 50px;
+  .contact__item:first-child .contact__icon {
+    width: 14px;
+    height: 10px;
+  }
+  .contact__item:last-child .contact__icon {
+    width: 10px;
+    height: 14px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .contact__icon {
+    margin-right: 10px;
+  }
+  .contact__item:first-child .contact__icon {
+    width: 16px;
+    height: 12px;
+  }
+  .contact__item:last-child .contact__icon {
+    width: 10px;
+    height: 16px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .contact__item:nth-child(1) {
     margin-bottom: 64px;
@@ -315,6 +343,20 @@ header {
     font-size: 34px;
     line-height: 1.176;
     color: #2196f3;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__item {
+    font-size: 12px;
+    line-height: 1.166;
+  }
+  .contact__item:first-child {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__item:not(:last-child) {
+    margin-right: 50px;
   }
 }
 
@@ -493,7 +535,6 @@ header {
 .social-icons {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .social-icons__thumb {
@@ -525,27 +566,40 @@ header {
   padding-bottom: 60px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .footer__sections {
     text-align: center;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer__sections {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
-.footer__logo {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-address {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__social {
+    flex-grow: 1;
+  }
+}
+
+.address__logo {
   display: block;
   margin-bottom: 20px;
   color: #ffffff;
 }
 
-.footer__contact {
+.address__contact {
   color: rgba(255, 255, 255, 0.6);
 }
-.footer__contact:hover, .footer__contact:focus {
+.address__contact:hover, .address__contact:focus {
   color: #2196f3;
   fill: #2196f3;
 }
@@ -554,25 +608,31 @@ header {
   color: #ffffff;
 }
 
-.footer__contact,
+.address__contact,
 .footer__street {
   line-height: 1.71;
   font-weight: 400;
   font-style: normal;
 }
 
-.footer__li:not(:last-child) {
+.address__li:not(:last-child) {
   margin-bottom: 8px;
 }
 @media screen and (min-width: 1200px) {
-  .footer__li:not(:last-child) {
+  .address__li:not(:last-child) {
     margin-bottom: 9px;
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer__social {
     margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__social {
+    margin-top: 5px;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -589,12 +649,22 @@ header {
   line-height: 1.142;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1199px) {
+  .footer__title {
+    margin-bottom: 20px;
+  }
+}
 
 .footer__icon {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-subscribe {
+    flex-grow: 2;
+  }
+}
 @media screen and (max-width: 1199px) {
   .footer-subscribe {
     margin-top: 60px;
@@ -607,12 +677,23 @@ header {
   }
 }
 
-.footer-subscribe__thumb {
-  display: flex;
+.subscribe-thumb {
   margin-top: 20px;
 }
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .subscribe-thumb {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-thumb {
+    display: flex;
+  }
+}
 
-.footer-subscribe__input {
+.subscribe-thumb__input {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -620,28 +701,33 @@ header {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
-  width: 358px;
+  max-width: 450px;
+  width: 100%;
   font-size: 16px;
   line-height: 1.25;
 }
-.footer-subscribe__input::placeholder {
+.subscribe-thumb__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-subscribe__submit {
+.subscribe-thumb__submit {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   padding-left: 29px;
-  margin-left: 12px;
   fill: #ffffff;
   background-color: #2196f3;
 }
-.footer-subscribe__submit:hover {
+.subscribe-thumb__submit:hover {
   background-color: #188ce8;
 }
 @media screen and (max-width: 1199px) {
-  .footer-subscribe__submit {
+  .subscribe-thumb__submit {
     margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-thumb__submit {
+    margin-left: 12px;
   }
 }/*# sourceMappingURL=portfolio.css.map */

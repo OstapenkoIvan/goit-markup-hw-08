@@ -23,13 +23,23 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  @media screen and (min-width: 480px) {
-    min-width: 450px;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 450px;
   }
 
   @media screen and (min-width: 1200px) {
     width: 528px;
-    height: 581px;
+    // height: 581px;
 
     top: 50vh;
     left: 50%;
@@ -94,6 +104,7 @@
   transform: translateY(-50%);
   left: 12px;
   fill: currentColor;
+  width: auto;
 
   .form__input:focus + & {
     fill: getColor("primary");

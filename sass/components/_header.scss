@@ -18,6 +18,12 @@ header {
       padding-top: 16px;
       padding-bottom: 16px;
     }
+
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
   }
 }
 
@@ -154,15 +160,18 @@ header {
 }
 
 .contact {
-  display: flex;
-
   @media screen and (max-width: 767px) {
+    display: flex;
     flex-direction: column-reverse;
     margin-top: auto;
   }
 
   @media screen and (min-width: 768px) {
     margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
   }
 }
 
@@ -173,7 +182,7 @@ header {
     color: getColor("primary");
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     color: getColor("font-2");
   }
 
@@ -184,27 +193,48 @@ header {
 }
 
 .contact__icon {
-  display: none;
-
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   @media screen and (min-width: 768px) {
-    margin-right: 50px;
+    // margin-right: 50px;
+    width: auto;
     vertical-align: middle;
     fill: currentColor;
     display: inline;
-    margin-right: 10px;
+    margin-right: 8px;
+
     .contact__link:focus &,
     .contact__link:hover & {
       fill: getColor("primary");
+    }
+
+    .contact__item:first-child & {
+      width: 14px;
+      height: 10px;
+    }
+
+    .contact__item:last-child & {
+      width: 10px;
+      height: 14px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+
+    .contact__item:first-child & {
+      width: 16px;
+      height: 12px;
+    }
+    .contact__item:last-child & {
+      width: 10px;
+      height: 16px;
     }
   }
 }
 
 .contact__item {
-  &:not(:last-child) {
-    @media screen and (min-width: 1200px) {
-      margin-right: 50px;
-    }
-  }
   @media screen and (max-width: 767px) {
     &:nth-child(1) {
       margin-bottom: 64px;
@@ -219,6 +249,20 @@ header {
       font-size: 34px;
       line-height: 1.176;
       color: getColor("primary");
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.166;
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 50px;
     }
   }
 }

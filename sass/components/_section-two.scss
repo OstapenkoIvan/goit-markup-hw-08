@@ -1,33 +1,59 @@
 .section-two {
-  padding-top: $section-padding;
+  @media screen and (max-width: 1199px) {
+    padding-top: $section-padding-60;
+    padding-bottom: $section-padding-60;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+  }
 
   & + & {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1199px) {
       display: none;
     }
-    padding-bottom: $section-padding;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 0;
+    }
   }
 }
 
 .section-two__list {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: flex;
-    flex-basis: calc(100% - 90px) / 4;
-    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
-.section-two__item:not(:last-child) {
+.section-two__item {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - $section-padding-2) / 2);
+
+    &:nth-child(2n + 1) {
+      margin-right: $section-padding-2;
+    }
+
+    &:nth-child(-n + 2) {
+      margin-bottom: $section-padding-2;
+    }
+  }
+
   @media screen and (min-width: 1200px) {
-    margin-right: $section-padding-2;
+    flex-basis: calc((100% - 90px) / 4);
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-right: $section-padding-2;
+    }
   }
 }
-
 .section-two__container {
   padding-top: 25px;
   padding-bottom: 25px;
   background-color: getColor("bcknd-2");
-  margin-bottom: 30px;
+  margin-bottom: $section-padding-2;
   border-radius: 4px;
 }
 
