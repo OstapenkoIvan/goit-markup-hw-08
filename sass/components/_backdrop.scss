@@ -63,6 +63,7 @@
   border-radius: 50%;
   background-color: getColor("font-3");
   fill: getColor("font-1");
+  transition: fill 250ms $cubic-1;
 
   &:hover,
   &:focus {
@@ -106,6 +107,7 @@
   left: 12px;
   fill: currentColor;
   width: auto;
+  transition: fill 250ms $cubic-1;
 
   .form__input:focus + & {
     fill: getColor("primary");
@@ -129,6 +131,7 @@
   padding-bottom: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border 250ms $cubic-1;
 
   &:hover,
   &:focus {
