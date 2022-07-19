@@ -4,6 +4,15 @@
 }
 
 .social-icons__thumb {
+  // width: 44px;
+  // height: 44px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-icons__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,13 +20,8 @@
   width: 44px;
   height: 44px;
 
-  cursor: pointer;
   border-radius: 50%;
   transition: background-color 250ms $cubic-1;
-
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
 
   &:hover,
   &:focus {
@@ -29,8 +33,8 @@
   fill: getColor("icon-1");
   transition: fill 250ms $cubic-1;
 
-  .social-icons__thumb:hover &,
-  .social-icons__thumb:focus & {
+  .social-icons__link:hover &,
+  .social-icons__link:focus & {
     fill: getColor("font-3");
   }
 }

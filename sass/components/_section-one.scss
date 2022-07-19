@@ -43,7 +43,8 @@
   margin-top: $section-padding-2;
   background-color: getColor("primary");
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: getColor("secondary");
   }
 }

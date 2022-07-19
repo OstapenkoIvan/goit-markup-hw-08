@@ -29,19 +29,6 @@
 }
 
 .section-four__item {
-  padding-top: 16px;
-  padding-bottom: 16px;
-
-  border: 1px solid getColor("icon-1");
-  border-radius: 4px;
-  fill: getColor("icon-1");
-
-  &:hover,
-  &:focus {
-    border: 1px solid getColor("primary");
-    fill: getColor("primary");
-  }
-
   @media screen and (min-width: 480px) and (max-width: 767px) {
     min-width: calc((100% - 60px) / 2);
   }
@@ -55,14 +42,27 @@
   }
 
   @media screen and (min-width: 1200px) {
-    padding-left: 31px;
-    padding-right: 31px;
+    width: calc((100% - 150px) / 6);
+
     &:not(:last-child) {
       margin-right: $section-padding-2;
     }
   }
 }
 
-.section-four__icon {
-  margin: 0 auto;
+.section-four__link {
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid getColor("icon-1");
+  border-radius: 4px;
+  fill: getColor("icon-1");
+
+  &:hover,
+  &:focus {
+    border: 1px solid getColor("primary");
+    fill: getColor("primary");
+  }
 }

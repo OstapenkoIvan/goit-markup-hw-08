@@ -32,6 +32,8 @@
   border: none;
 
   cursor: pointer;
+
+  transition: background-color 250ms $cubic-1;
 }
 
 %form__text {

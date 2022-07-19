@@ -50,6 +50,12 @@ li {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 1199px) {
+  body.modal-open {
+    overflow: hidden;
+  }
+}
+
 .hide {
   position: absolute;
   width: 1px;
@@ -119,6 +125,7 @@ li {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__input, .form__name {
@@ -466,7 +473,7 @@ header {
   margin-top: 30px;
   background-color: #2196f3;
 }
-.button-hero:hover {
+.button-hero:hover, .button-hero:focus {
   background-color: #188ce8;
 }
 
@@ -500,6 +507,11 @@ header {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .section-two__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .section-two__item {
     width: calc((100% - 30px) / 2);
@@ -670,20 +682,20 @@ header {
   justify-content: center;
 }
 
-.social-icons__thumb {
+.social-icons__thumb:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icons__link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
-  cursor: pointer;
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-icons__thumb:not(:last-child) {
-  margin-right: 10px;
-}
-.social-icons__thumb:hover, .social-icons__thumb:focus {
+.social-icons__link:hover, .social-icons__link:focus {
   background-color: #2196f3;
 }
 
@@ -691,7 +703,7 @@ header {
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-icons__thumb:hover .social-icons__img, .social-icons__thumb:focus .social-icons__img {
+.social-icons__link:hover .social-icons__img, .social-icons__link:focus .social-icons__img {
   fill: #ffffff;
 }
 
@@ -725,17 +737,6 @@ header {
   }
 }
 
-.section-four__item {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  fill: #afb1b8;
-}
-.section-four__item:hover, .section-four__item:focus {
-  border: 1px solid #2196f3;
-  fill: #2196f3;
-}
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .section-four__item {
     min-width: calc((100% - 60px) / 2);
@@ -753,16 +754,25 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .section-four__item {
-    padding-left: 31px;
-    padding-right: 31px;
+    width: calc((100% - 150px) / 6);
   }
   .section-four__item:not(:last-child) {
     margin-right: 30px;
   }
 }
 
-.section-four__icon {
-  margin: 0 auto;
+.section-four__link {
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+}
+.section-four__link:hover, .section-four__link:focus {
+  border: 1px solid #2196f3;
+  fill: #2196f3;
 }
 
 .footer {
@@ -861,7 +871,7 @@ header {
   border-radius: 50%;
 }
 
-.social-i cons__thumb.footer__icon .social-icons__img {
+.social-icons__thumb.footer__icon .social-icons__img {
   fill: #ffffff;
 }
 
@@ -902,6 +912,7 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  color: #ffffff;
   background-color: #2f303a;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -911,6 +922,10 @@ header {
 }
 .subscribe-thumb__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
+}
+.subscribe-thumb__input::selection {
+  color: #212121;
+  background-color: #188ce8;
 }
 @media screen and (max-width: 1199px) {
   .subscribe-thumb__input {
@@ -932,7 +947,7 @@ header {
   fill: #ffffff;
   background-color: #2196f3;
 }
-.subscribe-thumb__submit:hover {
+.subscribe-thumb__submit:hover, .subscribe-thumb__submit:focus {
   background-color: #188ce8;
 }
 @media screen and (max-width: 1199px) {
@@ -958,19 +973,12 @@ header {
   height: 100%;
   z-index: 4;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .backdrop {
     padding: 93px 15px 94px;
   }
-}
-
-.backdrop body {
-  overflow-y: hidden;
-}
-
-.backdrop.is-hidden body {
-  overflow-y: auto;
 }
 
 .modal {
@@ -992,7 +1000,7 @@ header {
     top: 50vh;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 450px;
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {

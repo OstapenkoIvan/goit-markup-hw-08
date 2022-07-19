@@ -92,7 +92,7 @@
   border-radius: 50%;
 }
 
-.social-i cons__thumb.footer__icon .social-icons__img {
+.social-icons__thumb.footer__icon .social-icons__img {
   fill: getColor("font-3");
 }
 
@@ -129,6 +129,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  color: getColor("font-3");
   background-color: getColor("bcknd-1");
   padding-top: 15px;
   padding-bottom: 15px;
@@ -138,6 +139,11 @@
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  &::selection {
+    color: getColor("font-1");
+    background-color: getColor("secondary");
   }
 
   @media screen and (max-width: 1199px) {
@@ -161,7 +167,8 @@
   fill: getColor("font-3");
   background-color: getColor("primary");
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: getColor("secondary");
   }
 
