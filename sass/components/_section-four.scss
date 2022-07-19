@@ -59,6 +59,7 @@
   border: 1px solid getColor("icon-1");
   border-radius: 4px;
   fill: getColor("icon-1");
+  transition: fill 250ms $cubic-1, border 250ms $cubic-1;
 
   &:hover,
   &:focus {

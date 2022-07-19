@@ -27,6 +27,7 @@
   border: none;
   border-radius: 4px;
   padding: 6px 22px;
+  transition: all 250ms $cubic-1;
 
   &:hover,
   &:focus {
@@ -59,6 +60,7 @@
 .item {
   background-color: getColor("font-3");
   border: 1px solid #eeeeee;
+  transition: box-shadow 250ms $cubic-1;
 
   &:hover,
   &:focus {

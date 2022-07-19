@@ -34,15 +34,16 @@ header {
   border: none;
   background-color: transparent;
   z-index: 3;
+  transition: fill 250ms $cubic-1;
 
   .icon-close {
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms $cubic-1;
     transform: translateY(-100%);
   }
 
   .icon-menu {
     transform: translateY(0);
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms $cubic-1;
   }
 
   &.is-active .icon-close {
@@ -79,7 +80,8 @@ header {
     background-color: getColor("font-3");
 
     transform: translateY(-100%);
-    transition: transform 250ms ease-in-out;
+
+    transition: transform 250ms $cubic-1;
 
     &.is-active {
       transform: translateY(0);
@@ -143,6 +145,8 @@ header {
 .nav__link {
   display: block;
   letter-spacing: 0.02em;
+  transition: color 250ms $cubic-1;
+
   &:hover,
   &:focus {
     color: getColor("primary");
@@ -177,6 +181,8 @@ header {
 
 .contact__link {
   letter-spacing: 0.02em;
+  transition: color 250ms $cubic-1;
+
   &:hover,
   &:focus {
     color: getColor("primary");
@@ -197,12 +203,12 @@ header {
     display: none;
   }
   @media screen and (min-width: 768px) {
-    // margin-right: 50px;
     width: auto;
     vertical-align: middle;
     fill: currentColor;
     display: inline;
     margin-right: 8px;
+    transition: fill 250ms $cubic-1;
 
     .contact__link:focus &,
     .contact__link:hover & {

@@ -153,14 +153,15 @@ header {
   border: none;
   background-color: transparent;
   z-index: 3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__menu .icon-close {
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(-100%);
 }
 .header__menu .icon-menu {
   transform: translateY(0);
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__menu.is-active .icon-close {
   transform: translateY(0);
@@ -190,7 +191,7 @@ header {
     padding: 48px 40px;
     background-color: #ffffff;
     transform: translateY(-100%);
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header__block.is-active {
     transform: translateY(0);
@@ -246,6 +247,7 @@ header {
 .nav__link {
   display: block;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav__link:hover, .nav__link:focus {
   color: #2196f3;
@@ -283,6 +285,7 @@ header {
 
 .contact__link {
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact__link:hover, .contact__link:focus {
   color: #2196f3;
@@ -311,6 +314,7 @@ header {
     fill: currentColor;
     display: inline;
     margin-right: 8px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .contact__link:focus .contact__icon, .contact__link:hover .contact__icon {
     fill: #2196f3;
@@ -446,6 +450,7 @@ header {
   border: none;
   border-radius: 4px;
   padding: 6px 22px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio__button:hover, .portfolio__button:focus {
   color: #ffffff;
@@ -473,6 +478,7 @@ header {
 .item {
   background-color: #ffffff;
   border: 1px solid #eeeeee;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item:hover, .item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -612,6 +618,7 @@ header {
 
 .address__contact {
   color: rgba(255, 255, 255, 0.6);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address__contact:hover, .address__contact:focus {
   color: #2196f3;
