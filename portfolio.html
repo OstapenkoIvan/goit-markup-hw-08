@@ -27,6 +27,7 @@
           <use class="icon-close" href="images/icons.svg#icon-close_40px"></use>
         </svg>
       </button>
+
       <div class="header__block" data-menu>
         <ul class="nav">
           <li class="nav__btn"><a class="nav__link" href="index.html">Студия</a>
@@ -36,25 +37,33 @@
         </ul>
         <ul class="contact">
           <li class="contact__item">
-            <a href="mailto:info@devstudio.com" class="contact__link">
+            <a href="mailto:info@devstudio.com" aria-label="веб почта" class="contact__link">
               <svg class="contact__icon">
                 <use href="images/icons.svg#icon-envelope"></use>
               </svg>info@devstudio.com</a>
           </li>
           <li class="contact__item">
-            <a href="tel:+380961111111" class="contact__link"><svg class="contact__icon">
+            <a href="tel:+380961111111" aria-label="номер телефона" class="contact__link"><svg class="contact__icon">
                 <use href="images/icons.svg#icon-Vector"></use>
               </svg>+380961111111</a>
           </li>
         </ul>
         <ul class="social">
-          <li class="social__item"><a class="social__link" href="www.instagram.com">Instagram</a></li>
-          <li class="social__item"><a class="social__link" href="twitter.com">Twitter</a></li>
-          <li class="social__item"><a class="social__link" href="facebook.com">Facebook</a></li>
-          <li class="social__item"><a class="social__link" href="linkedin.com">LinkedIn</a></li>
+          <li class="social__item"><a class="social__link" aria-label="инстаграм аккаунт" href="www.instagram.com"
+              target="_blank" rel="noopener noreferrer nofollow ">Instagram</a>
+          </li>
+          <li class="social__item"><a class="social__link" aria-label="твиттер аккаунт" href="twitter.com"
+              target="_blank" rel="noopener noreferrer nofollow ">Twitter</a></li>
+          <li class="social__item"><a class="social__link" aria-label="фейсбук аккаунт" href="facebook.com"
+              target="_blank" rel="noopener noreferrer nofollow ">Facebook</a>
+          </li>
+          <li class="social__item"><a class="social__link" aria-label="линкедин аккаунт" href="linkedin.com"
+              target="_blank" rel="noopener noreferrer nofollow ">LinkedIn</a>
+          </li>
         </ul>
       </div>
-      </т>
+
+    </nav>
   </header>
   <main>
     <!-- This is FILTER BUTTONS part -->
@@ -69,7 +78,7 @@
           <li class="portfolio__list"><button type=" button" class="portfolio__button">Маркетинг</button></li>
         </ul>
         <ul class="portfolio__container">
-          <li class="item">
+          <li class="item" aria-label="Проект технокряк">
             <div class="item__overlay">
               <picture>
                 <source srcset=" 
@@ -106,7 +115,7 @@
               <p class="item__name">Веб-сайт</p>
             </div>
           </li>
-          <li class="item">
+          <li class="item" aria-label="Проект постер New Orlean vs Golden Star">
             <div class="item__overlay">
               <picture>
                 <source srcset=" 
@@ -143,7 +152,7 @@
               <p class="item__name">Дизайн</p>
             </div>
           </li>
-          <li class="item">
+          <li class="item" aria-label="проект Ресторан Seafood">
             <div class="item__overlay">
               <picture>
                 <source srcset=" 
@@ -181,7 +190,7 @@
               <p class="item__name">Приложение</p>
             </div>
           </li>
-          <li class="item">
+          <li class="item" aria-label="проект Prime">
             <div class="item__overlay">
               <picture>
                 <source srcset=" 
@@ -218,7 +227,7 @@
               <p class="item__name">Маркетинг</p>
             </div>
           </li>
-          <li class="item">
+          <li class="item" aria-label="проект boxes">
             <div class="item__overlay">
               <picture>
                 <source srcset=" 
@@ -255,7 +264,7 @@
               <p class="item__name">Приложение</p>
             </div>
           </li>
-          <li class="item">
+          <li class="item" aria-label="проект веб-сайт">
             <div class="item__overlay">
               <picture>
                 <source srcset=" 
@@ -293,7 +302,7 @@
               <p class="item__name">Веб-сайт</p>
             </div>
           </li>
-          <li class="item">
+          <li class="item" aria-label="проект Издание Limited Edition">
             <div class="item__overlay">
               <picture>
                 <source srcset=" 
@@ -330,7 +339,7 @@
               <p class="item__name">Дизайн</p>
             </div>
           </li>
-          <li class="item">
+          <li class="item" aria-label="проект LAB">
             <div class="item__overlay">
               <picture>
                 <source srcset=" 
@@ -367,7 +376,7 @@
               <p class="item__name">Маркетинг</p>
             </div>
           </li>
-          <li class="item">
+          <li class="item" aria-label="проект Growing Business">
             <div class="item__overlay">
               <picture>
                 <source srcset=" 
@@ -400,7 +409,6 @@
                   посетителю получить исчерпывающие сведения о компании или частном лице.</p>
               </div>
             </div>
-
             <div class="item__context">
               <h2 class="item__header">Growing Business</h2>
               <p class="item__name">Приложение</p>
@@ -418,15 +426,16 @@
         <address>
           <ul class="address">
             <li class="address__li">
-              <a class="footer__street" href="https://goo.gl/maps/dMaArt2xvUtYKD9Z6" target="_blank"
-                rel="noopener noreferrer nofollow">г. Киев,
+              <a class="footer__street" aria-label="Адресс офиса компании" href="https://goo.gl/maps/dMaArt2xvUtYKD9Z6"
+                target="_blank" rel="noopener noreferrer nofollow">г. Киев,
                 пр-т Леси Украинки, 26</a>
             </li>
             <li class="address__li">
-              <a class="address__contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <a class="address__contact" aria-label="Электронная почта"
+                href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
             <li class="address__li">
-              <a class="address__contact" href="tel:+380961111111">+380961111111</a>
+              <a class="address__contact" aria-label="Номер телефона" href="tel:+380961111111">+380961111111</a>
             </li>
           </ul>
         </address>
@@ -434,25 +443,29 @@
       <section class="footer__social">
         <h2 class="footer__title">присоединяйтесь</h2>
         <ul class="social-icons">
-          <li class="social-icons__thumb footer__icon"><a class="social-icons__link" href="instagram.com">
+          <li class="social-icons__thumb footer__icon"><a class="social-icons__link" aria-label="Инстаграмм аккаунт"
+              href="instagram.com">
               <svg class="social-icons__img" width="20px" height="20px">
                 <use href="images/icons.svg#icon-instagram-1"></use>
               </svg>
             </a>
           </li>
-          <li class="social-icons__thumb footer__icon"><a class="social-icons__link" href="twitter.com">
+          <li class="social-icons__thumb footer__icon"><a class="social-icons__link" aria-label="Твиттер аккаунт"
+              href="twitter.com">
               <svg class="social-icons__img" width="20px" height="20px">
                 <use href="images/icons.svg#icon-twitter-1"></use>
               </svg>
             </a>
           </li>
-          <li class="social-icons__thumb footer__icon"><a class="social-icons__link" href="facebook.com">
+          <li class="social-icons__thumb footer__icon"><a class="social-icons__link" aria-label="Фейсбук аккаунт"
+              href="facebook.com">
               <svg class="social-icons__img" width="20px" height="20px">
                 <use href="images/icons.svg#icon-facebook-1"></use>
               </svg>
             </a>
           </li>
-          <li class="social-icons__thumb footer__icon"><a class="social-icons__link" href="linkedin.com">
+          <li class="social-icons__thumb footer__icon"><a class="social-icons__link" aria-label="Линкедин аккаунт"
+              href="linkedin.com">
               <svg class="social-icons__img" width="20px" height="20px">
                 <use href="images/icons.svg#icon-linkedin-1"></use>
               </svg>
@@ -465,7 +478,7 @@
 
         <form class="subscribe-thumb">
           <input type="mail" placeholder="E-mail" class="subscribe-thumb__input">
-          <button type="submit" class="subscribe-thumb__submit">Подписаться
+          <button type="submit" class="subscribe-thumb__submit" aria-label="Subscribe to email">Подписаться
             <svg class="subscribe-thumb__icon" width="24px" height="24px">
               <use href="images/icons.svg#icon-icon-send"></use>
             </svg>
