@@ -11,10 +11,14 @@
 .portfolio__filter {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   @media screen and (min-width: 768px) {
     justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
 
@@ -58,6 +62,8 @@
 }
 
 .item {
+  display: flex;
+  flex-direction: column;
   background-color: getColor("font-3");
   border: 1px solid #eeeeee;
   transition: box-shadow 250ms $cubic-1;
@@ -69,7 +75,9 @@
   }
 
   @media screen and (max-width: 767px) {
-    margin-bottom: $section-padding-2;
+    &:not(:last-child) {
+      margin-bottom: $section-padding-2;
+    }
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -120,6 +128,7 @@
 }
 
 .item__context {
+  flex-grow: 1;
   padding: 20px 24px;
 }
 
